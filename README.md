@@ -3,7 +3,7 @@ A little CLI application that will generate Redux modules (action / async-action
 
 File layout:
 - modules
-  - <module-name>
+  - my-module
     - types.js  
     - actions.js
     - async-actions.js
