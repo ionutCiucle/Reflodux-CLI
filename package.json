@@ -1,0 +1,19 @@
+{
+  "name": "redux-cli",
+  "version": "1.0.0",
+  "description": "A simple cli for generating redux modules for your application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "redux",
+    "cli"
+  ],
+  "author": "Ionut Ciucle",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.0.0",
+    "minimist": "^1.2.0"
+  }
+}
