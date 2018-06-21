@@ -13,7 +13,7 @@ const _getModuleTypeFileTemplate = (moduleName) => ([
   `export type ${moduleName}Action = \n\n`
 ]);
 
-const getTypeFileTemplate = (moduleName) => {
+export const getTypeFileTemplate = (moduleName) => {
   return (
     _getModuleTypeFileTemplate(moduleName)
       .concat(
@@ -21,5 +21,3 @@ const getTypeFileTemplate = (moduleName) => {
       ).join('')
   );
 };
-
-module.exports = { getTypeFileTemplate };

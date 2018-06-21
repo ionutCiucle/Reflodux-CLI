@@ -1,6 +1,7 @@
 {
   "parserOptions": {
-    "ecmaVersion": 2017
+    "ecmaVersion": 2017,
+    "sourceType": "module"
   },
   "extends": "eslint:recommended",
   "globals": {
@@ -20,6 +21,8 @@
     "no-use-before-define": ["error", { "functions": true, "classes": true }],
     "prefer-template": ["error"],
     "object-curly-spacing": ["error", "always"],
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "never"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }]
   }
 }

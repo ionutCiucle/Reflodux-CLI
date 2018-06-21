@@ -1,38 +1,20 @@
 
-const { getTypeFileTemplate } = require('./modules/template/module-types');
-const { getAsyncActionTypes, getAsyncActions } = require('./modules/template/async-actions');
-const { 
-  addTypeFile, 
-  addAsyncActionTypesToFile, 
-  addAsyncActionTypesToGlobalAction 
-} = require('./modules/file');
-
+import { getTypeFileTemplate } from './modules/template/module-types';
+import { addTypeFile } from './modules/file';
+import { addAsyncAction } from './controllers/action';
 // const cwd = path.basename(process.cwd());
 
-const createModule = (moduleName, path) => {
+export const createModule = (moduleName, path) => {
+  // TODO: move this section in actions controller
   addTypeFile(
     path,
     getTypeFileTemplate(moduleName)
   );
 };
 
-const addAction = (actionName, typeFilePath, isAsync = false) => {
+export const addAction = (actionName, typeFilePath, isAsync = false) => {
   if (isAsync) {
-    addAsyncActionTypesToFile(
-      actionName,
-      typeFilePath,
-      getAsyncActionTypes(actionName)  
-    );
-    addAsyncActionTypesToGlobalAction(
-      actionName,
-      typeFilePath,
-      getAsyncActions(actionName)
-    );
+    addAsyncAction(actionName, typeFilePath);
   }
   // TODO: add sync action support
-};
-
-module.exports = {
-  createModule,
-  addAction
 };
