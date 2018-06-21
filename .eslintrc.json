@@ -1,0 +1,25 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "extends": "eslint:recommended",
+  "globals": {
+    "module": false,
+    "__dirname": false,
+    "require": false,
+    "process": false,
+    "console": false
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "space-before-function-paren": ["error", {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+    }],
+    "no-use-before-define": ["error", { "functions": true, "classes": true }],
+    "prefer-template": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "semi": ["error", "always"]
+  }
+}

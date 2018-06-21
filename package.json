@@ -13,6 +13,8 @@
   "author": "Ionut Ciucle",
   "license": "ISC",
   "dependencies": {
+    "change-case": "^3.0.2",
+    "eslint": "^4.19.1",
     "inquirer": "^6.0.0",
     "minimist": "^1.2.0"
   }

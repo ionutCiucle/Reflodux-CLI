@@ -1,0 +1,30 @@
+//@flow 
+export type AppState = {}; 
+
+// Action Types 
+export const CREATE_REDUX_CLI_REQUEST: 'CREATE_REDUX_CLI_REQUEST' = 'CREATE_REDUX_CLI_REQUEST';
+export const CREATE_REDUX_CLI_SUCCESS: 'CREATE_REDUX_CLI_SUCCESS' = 'CREATE_REDUX_CLI_SUCCESS';
+export const CREATE_REDUX_CLI_FAILURE: 'CREATE_REDUX_CLI_FAILURE' = 'CREATE_REDUX_CLI_FAILURE';
+export type CREATE_REDUX_CLI_REQUEST_ACTION = { type: typeof CREATE_REDUX_CLI_REQUEST };
+export type CREATE_REDUX_CLI_SUCCESS_ACTION = { type: typeof CREATE_REDUX_CLI_SUCCESS };
+export type CREATE_REDUX_CLI_FAILURE_ACTION = { type: typeof CREATE_REDUX_CLI_SUCCESS, error: Object };
+
+export const CREATE_REDUX_CLI_REQUEST: 'CREATE_REDUX_CLI_REQUEST' = 'CREATE_REDUX_CLI_REQUEST';
+,export const CREATE_REDUX_CLI_SUCCESS: 'CREATE_REDUX_CLI_SUCCESS' = 'CREATE_REDUX_CLI_SUCCESS';
+,export const CREATE_REDUX_CLI_FAILURE: 'CREATE_REDUX_CLI_FAILURE' = 'CREATE_REDUX_CLI_FAILURE';
+,export type CREATE_REDUX_CLI_REQUEST_ACTION = { type: typeof CREATE_REDUX_CLI_REQUEST };
+,export type CREATE_REDUX_CLI_SUCCESS_ACTION = { type: typeof CREATE_REDUX_CLI_SUCCESS };
+,export type CREATE_REDUX_CLI_FAILURE_ACTION = { type: typeof CREATE_REDUX_CLI_SUCCESS, error: Object };
+
+// Global Action Type 
+export type AppAction = 
+  | CREATE_REDUX_CLI_REQUEST_ACTION
+  | CREATE_REDUX_CLI_SUCCESS_ACTION
+  | CREATE_REDUX_CLI_FAILURE_ACTION
+
+  | CREATE_REDUX_CLI_REQUEST_ACTION,  | CREATE_REDUX_CLI_SUCCESS_ACTION,  | CREATE_REDUX_CLI_FAILURE_ACTION
+
+type GetState = () => { auth: AppState };
+type PromiseAction = Promise<AppAction>;
+export type Dispatch = (action: AppAction | ThunkAction | PromiseAction | Array<AppAction>) => any;
+export type ThunkAction = (dispatch: Dispatch, getState: GetState) => any;

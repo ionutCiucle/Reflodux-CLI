@@ -13,17 +13,33 @@ const actions = {
   failure: `| <ACTION_NAME>_FAILURE_ACTION`
 };
 
+const _getStoreActionTypes = (moduleName) => {
+  const storeTypes = {
+    getState: `type GetState = () => { auth: ${moduleName}State };`,
+    promiseAction: `type PromiseAction = Promise<${moduleName}Action>;`,
+    dispatchAction: `export type Dispatch = (action: ${moduleName}Action | ThunkAction | PromiseAction | Array<${moduleName}Action>) => any;`, 
+    thunkAction: `export type ThunkAction = (dispatch: Dispatch, getState: GetState) => any;`
+  };
+  let output = '';
+
+  for (let key in storeTypes) {
+    output += `${storeTypes[key]}'\n'`;
+  }
+
+  return output;
+};
+
 const token = '<ACTION_NAME>';
 
 module.exports = {
   getFileStub(moduleName) {
-    return  `//@flow \n\n // Action Types \n // Global Action Type \n export type ${moduleName} = \n`;
+    return  `//@flow \n export type ${moduleName}State = {}; \n\n // Action Types \n // Global Action Type \n export type ${moduleName}Action = \n\n// Store Types \n${_getStoreActionTypes(moduleName)}`;
   },
   getActionTypes(actionName) {
     let output = '';    
     
     for (key in actionTypes) {
-      output += actionTypes[key].replace(new RegExp(token, 'g'), actionName) + '\n';
+      output += `${actionTypes[key].replace(new RegExp(token, 'g'), actionName)  }\n`;
     }
 
     return output;
@@ -32,10 +48,10 @@ module.exports = {
     let output = '';    
     
     for (key in actions) {
-      output += actions[key].replace(new RegExp(token, 'g'), actionName) + '\n';
+      output += `${actions[key].replace(new RegExp(token, 'g'), actionName)  }\n`;
     }
 
     return output;
   }
-}
+};
 
