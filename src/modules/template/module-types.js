@@ -1,3 +1,5 @@
+import {  pascalCase } from 'change-case';
+
 const _getStoreActionTypes = (moduleName) => ([
   `type GetState = () => { auth: ${moduleName}State };\n`,
   `type PromiseAction = Promise<${moduleName}Action>;\n`,
@@ -15,9 +17,9 @@ const _getModuleTypeFileTemplate = (moduleName) => ([
 
 export const getTypeFileTemplate = (moduleName) => {
   return (
-    _getModuleTypeFileTemplate(moduleName)
+    _getModuleTypeFileTemplate(pascalCase(moduleName))
       .concat(
-        _getStoreActionTypes(moduleName)
+        _getStoreActionTypes(pascalCase(moduleName))
       ).join('')
   );
 };
