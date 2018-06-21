@@ -9,7 +9,7 @@ const _getModuleTypeFileTemplate = (moduleName) => ([
   '//@flow \n',
   `export type ${moduleName}State = {}; \n\n`,
   '// Action Types \n',
-  '// Global Action Type \n',
+  '// Module Action Type \n',
   `export type ${moduleName}Action = \n\n`
 ]);
 

@@ -1,13 +1,16 @@
 
-// const path = require('path');
 const { getTypeFileTemplate } = require('./modules/template/module-types');
 const { getAsyncActionTypes, getAsyncActions } = require('./modules/template/async-actions');
-const { addTypeFile2, addAsyncActionTypesToFile, addAsyncActionTypesToGlobalAction } = require('./modules/file');
+const { 
+  addTypeFile, 
+  addAsyncActionTypesToFile, 
+  addAsyncActionTypesToGlobalAction 
+} = require('./modules/file');
 
 // const cwd = path.basename(process.cwd());
 
 const createModule = (moduleName, path) => {
-  addTypeFile2(
+  addTypeFile(
     path,
     getTypeFileTemplate(moduleName)
   );
