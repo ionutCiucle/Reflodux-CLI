@@ -1,17 +1,21 @@
 import minimist from 'minimist';
-import  { createModule, addAction } from './routes';
+// import  { createModule, addAction } from './routes';
+import router from './router';
 
 const argv = minimist(process.argv.slice(2));
 
 const run = async () => {
-  const { actionName, path: filePath, create, moduleName } = argv;
+  // const { actionName, path: filePath, create, module } = argv;
+  const { module } = argv;
   
-  if (create && moduleName) {
-    createModule(moduleName, filePath);
-    return;
-  }
+  router({ module });
 
-  addAction(actionName, filePath, true);
+  // if (create && moduleName) {
+  //   createModule(moduleName, filePath);
+  //   return;
+  // }
+
+  // addAction(actionName, filePath, true);
 };
 
 run();

@@ -1,15 +1,16 @@
 
-import { getTypeFileTemplate } from './modules/template/module-types';
-import { addTypeFile } from './modules/file';
-import { addAsyncAction } from './controllers/action';
+// import { getTypeFileTemplate } from './modules/template/module-types';
+// import { addTypeFile } from './modules/file';
+// import { addAsyncAction, createModuleDirectory } from './controllers/action';
 // const cwd = path.basename(process.cwd());
 
 export const createModule = (moduleName, path) => {
   // TODO: move this section in actions controller
-  addTypeFile(
-    path,
-    getTypeFileTemplate(moduleName)
-  );
+
+  // addTypeFile(
+  //   path,
+  //   getTypeFileTemplate(moduleName)
+  // );
 };
 
 export const addAction = (actionName, typeFilePath, isAsync = false) => {

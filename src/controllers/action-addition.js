@@ -1,9 +1,8 @@
-
-import { injectTextInFileAfterFlag } from '../modules/file';
+import { injectTextInFileAfterFlag } from '../util';
 import { ACTION_TYPES_FLAG, MODULE_ACTION_TYPE } from '../constants';
-import { getAsyncActionTypes, getAsyncActions } from '../modules/template/async-action-type';
+import { getAsyncActions, getAsyncActionTypes } from '../templates/async-action-type';
 
-export const addAsyncAction = (actionName, filePath) => {
+export const addAsyncAction = (filePath, actionName) => {
   injectTextInFileAfterFlag({
     filePath,
     flag: ACTION_TYPES_FLAG,
@@ -15,4 +14,6 @@ export const addAsyncAction = (actionName, filePath) => {
     content: getAsyncActions(actionName),
     flagIndexOffset: 2
   });
-}; 
+};
+
+export const addAction = () => {};
