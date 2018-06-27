@@ -1,12 +1,13 @@
 import fs from 'fs';
 import path from 'path';
+import { getIndexTemplateFile } from '../templates/index-file';
 import { getTypeFileTemplate } from '../templates/module-types';
 import { getReducerFileTemplate } from '../templates/reducer';
 
-export const addIndexFile = (modulePath) => {
+export const addIndexFile = (modulePath, moduleName) => {
   const indexPath = path.join(modulePath, 'index.js');
 
-  fs.writeFileSync(indexPath, '');
+  fs.writeFileSync(indexPath, getIndexTemplateFile(moduleName));
 };
 
 export const addTypeFile = (modulePath, moduleName) => {

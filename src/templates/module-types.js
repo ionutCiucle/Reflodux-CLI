@@ -1,7 +1,7 @@
-import {  pascalCase } from 'change-case';
+import {  pascalCase, camelCase } from 'change-case';
 
 const _getStoreActionTypes = (moduleName) => ([
-  `type GetState = () => { auth: ${moduleName}State };\n`,
+  `type GetState = () => { ${camelCase(moduleName)}: ${moduleName}State };\n`,
   `type PromiseAction = Promise<${moduleName}Action>;\n`,
   `export type Dispatch = (action: ${moduleName}Action | ThunkAction | PromiseAction | Array<${moduleName}Action>) => any;\n`,
   `export type ThunkAction = (dispatch: Dispatch, getState: GetState) => any;`
