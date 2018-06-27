@@ -1,6 +1,6 @@
-import stoneFreeReducer from './reducer';
+import gratedCheeseReducer from './reducer';
 export * from './actions';
 export * from './async-actions';
 export * from './types';
 
-export default stoneFreeReducer;
+export default gratedCheeseReducer;

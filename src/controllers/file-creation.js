@@ -34,5 +34,3 @@ export const addReducerFile = (modulePath, moduleName) => {
 
   fs.writeFileSync(reducerPath, getReducerFileTemplate(moduleName));
 };
-
-export const addReducer = () => {};

@@ -1,5 +1,5 @@
 import { createModule } from './controllers/module-creation';
-import { addAsyncAction } from './controllers/action-addition';
+import { addAsyncAction, addAction } from './controllers/action-addition';
 
 const router = ({ module: moduleName, action: actionName, path: filePath, async }) => {
   if (moduleName) {
@@ -11,7 +11,7 @@ const router = ({ module: moduleName, action: actionName, path: filePath, async 
     if (async) {
       addAsyncAction(actionName, filePath);
     } else {
-      // create regular action
+      addAction(actionName, filePath);
     }
     return;
   }
