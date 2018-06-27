@@ -21,7 +21,7 @@ npm start
 node ./dist/main.js --module moduleName
 ```
 
-### Add action type (add `async` param for creating an async action):
+### Add action (add `async` param for creating an async action suite, w/ request, success and failure action creators):
 ```
 node ./dist/main.js --action actionName --path some/path/relative/to/cwd [--async]
 ```
