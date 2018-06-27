@@ -1,21 +1,20 @@
 # Reflodux-CLI
-## _A little CLI application that will generate Redux modules (action / async-action stubs, types, reducer stub and index file), with Flow typings:_
+## _A little CLI application that will help with the not-so-fun, repetitive tasks of working with React, Redux and Flow:_
 
-### Create module:
+### Create module (in current working directory, will have added optional `path` param):
 ```
-node index.js --create --moduleName App --path  path/to/type/file/relative/to/project/root/for/now
+node ./dist/main.js --module moduleName
 ```
  
- _path param will be removed when the create module directory feature will be implemented_
+ _`path` param will be removed when the create module directory feature will be implemented_
 
-### Add async action type:
+### Add action type (add `async` param for creating an async action):
 ```
-node index.js --actionName MY_ACTION --path path/to/type/file/relative/to/project/root/for/now
+node ./dist/main.js --action actionName --path some/path/relative/to/cwd [--async]
 ```
+_1. async support will be added soon;
 
-_support for sync action types will be added soon_
-
-_support for generating async action & regular action creators will be added soon_
+_2. support for generating async action & regular action creators will be added soon._
 
 #### Module layout:
 ```
@@ -27,3 +26,5 @@ _support for generating async action & regular action creators will be added soo
     - reducer.js
     - index.js
 ```
+
+### Next: Create functional / stateful React Component stubs
