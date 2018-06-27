@@ -12,7 +12,7 @@ const _getModuleTypeFileTemplate = (moduleName) => ([
   `export type ${moduleName}State = {}; \n\n`,
   '// Action Types \n',
   '// Module Action Type \n',
-  `export type ${moduleName}Action = \n\n`
+  `export type ${moduleName}Action = {}\n\n`
 ]);
 
 export const getTypeFileTemplate = (moduleName) => {

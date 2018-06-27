@@ -3,7 +3,7 @@ export type StoneFreeState = {};
 
 // Action Types 
 // Module Action Type 
-export type StoneFreeAction = 
+export type StoneFreeAction = {}
 
 type GetState = () => { stoneFree: StoneFreeState };
 type PromiseAction = Promise<StoneFreeAction>;
