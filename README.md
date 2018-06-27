@@ -21,14 +21,12 @@ npm start
 ```
 node ./dist/main.js --module moduleName
 ```
- 
- _`path` param will be removed when the create module directory feature will be implemented_
 
 ### Add action type (add `async` param for creating an async action):
 ```
 node ./dist/main.js --action actionName --path some/path/relative/to/cwd [--async]
 ```
-_1. async support will be added soon;
+_1. async support will be added soon;_
 
 _2. support for generating async action & regular action creators will be added soon._
 
