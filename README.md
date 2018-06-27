@@ -1,7 +1,7 @@
 # Reflodux-CLI
 ## _A little CLI application that will help with the not-so-fun, repetitive tasks of working with React, Redux and Flow:_
 
-#### Module layout:
+### Module layout:
 ```
 - modules
   - my-module
@@ -11,8 +11,7 @@
     - reducer.js
     - index.js
 ```
-
-### Start `webpack`, in order to build app
+### Start `webpack`, in order to build app:
 ```
 npm start
 ```
