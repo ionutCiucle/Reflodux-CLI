@@ -1,7 +1,7 @@
 {
-  "name": "redux-cli",
+  "name": "reflodux-cli",
   "version": "1.0.0",
-  "description": "A simple cli for generating redux modules for your application.",
+  "description": "A simple CLI that generates Redux modules with Flow typings for your application.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,6 +9,8 @@
   },
   "keywords": [
     "redux",
+    "flow",
+    "react",
     "cli"
   ],
   "author": "Ionut Ciucle",
