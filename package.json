@@ -1,6 +1,6 @@
 {
   "name": "reflodux-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A simple CLI that generates Redux modules with Flow typings for your application.",
   "main": "index.js",
   "scripts": {
