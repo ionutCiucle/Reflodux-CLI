@@ -1,17 +1,17 @@
 import { createModule } from './controllers/module-creation';
 import { addAsyncAction, addAction } from './controllers/action-addition';
 
-const router = ({ module: moduleName, action: actionName, path: filePath, async }) => {
+const router = ({ module: moduleName, action: actionName, path = '', async }) => {
   if (moduleName) {
-    createModule(moduleName);
+    createModule(moduleName, path);
     return;  
   }
 
-  if (actionName && filePath) {
+  if (actionName && path) {
     if (async) {
-      addAsyncAction(actionName, filePath);
+      addAsyncAction(actionName, path);
     } else {
-      addAction(actionName, filePath);
+      addAction(actionName, path);
     }
     return;
   }

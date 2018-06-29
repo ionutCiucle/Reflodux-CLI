@@ -6,6 +6,6 @@ export const getActionCreatorType = (actionName) => (
 
 export const getActionCreator = (actionName) => ([
   `export const ${camelCase(actionName)} = (): ${constantCase(actionName)}_ACTION => {;\n`,
-  `  return { type: ${constantCase}_ACTION };\n`,
+  `  return { type: ${constantCase} };\n`,
   `}\n`
 ]);

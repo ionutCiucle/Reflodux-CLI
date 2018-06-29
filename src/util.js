@@ -16,3 +16,11 @@ export const injectTextInFileAfterFlag = ({ filePath, flag, content, flagIndexOf
 
   fs.writeFileSync(filePath, fileRows.join('\n'));
 };
+
+export const injectTextInFileAtTheEnd = ({ filePath, content }) => {
+  const fileRows = fs.readFileSync(filePath).toString().split('\n');
+
+  fileRows.push(content);
+
+  fs.writeFileSync(filePath, fileRows.join('\n'));
+};
